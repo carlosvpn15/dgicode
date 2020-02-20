@@ -671,7 +671,7 @@ input[type=number] {
 .section-weght {
 	height: 50%;
 	background-color: ;
-	background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.3)), url(../img/bg.jpg) ;
+	background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.3)), url(bg.jpg) ;
   	background-position: center;
   	background-size: 350px 350px ;
  	background-repeat: repeat;
