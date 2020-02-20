@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> UNION SQUARE EVENTS </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Google font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400|Montserrat|Orbitron&display=swap" rel="stylesheet">
+	
+	<!-- Font Awesome -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	
+
+	<!-- StyleSheet -->
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+			
+</head>
+<body>
+
+<!-- == HEADER ====================================================================================== -->
+	
+
+	<!-- <<<<<<<<<< NAVBAR >>>>>>>>>> -->
+
+	<nav class="navbar">
+			<a href="index.html" ><img  src="img/use.png" alt="logo" class="brand"> </a>
+			<a href="index.html" class="logo"> UNION SQUARE EVENTS </a>
+			<input class="menu-btn" type="checkbox" id="menu-btn"/>
+			<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+			<ul  class="menu">	
+				<li><a href="index.html"> HOME </a></li>
+				<li><a href="order.html"> ORDER </a></li>
+				<li><a href="#" class="active"> WEIGHT </a></li>
+				<li><a href="data.html"> PRODUCTS </a></li>
+				<li><a href="invoice.html"> INVOICE </a></li>
+				<li><a href="inventory.html"> INVENTORY </a></li>
+				<li><a href="vendors.html"> VENDORS </a></li>
+			</ul>	
+	</nav>
+
+
+	<!-- <<<<<<<<<< HEADER >>>>>>>>>> -->
+	
+	<header id="home" class="banner"> 
+
+	
+		 	<h1 class="main-text">WEIGHT CONVERTER</h1>
+			
+			<div class="btn-container"> 
+				<a href="#pound" class="btn-link" >POUND</a>
+				<a href="#kilo"  class="btn-link"> KILO</a>
+				<a href="#ounce" class="btn-link">OUNCE</a>
+				<a href="#grams" class="btn-link">GROUND</a>
+			</div>
+
+	</header>
+
+		<a href="#home" class="btn-home"><i class="fas fa-arrow-up"></i></a>
+		
+
+<!-- == WEGHT ====================================================================================== -->
+
+<div class="section-weght">
+
+	<div class="f-container1" id="pound" >
+
+		<h2 class="f-full text-title">POUND</h2>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Pounds to Kilograms -->
+
+		<div class="f-box1 ">
+			
+			<h3 class="box-text">Pound To Kilogram</h3>
+			<div class="left">
+			
+				<p>
+				  <label class="box-text2">Pounds</label>
+				  <input  id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+				</p>
+				<p class="border">Kilograms: <span id="outputKilograms"></span></p>
+		
+			</div>
+
+		</div>
+
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Pounds to Ounces -->
+
+		<div class="f-box1 "> 
+
+			<h3 class="box-text">Pound To Ounce</h3>
+			<div class="left">
+			
+				<p>
+				  <label class="box-text2">Pounds</label>
+				  <input id="inputPounds2" type="number" placeholder="Pounds" oninput="weightConverter2(this.value)" onchange="weightConverter2(this.value)">
+				</p>
+				<p class="border">Ounces: <span id="outputOunces"></span></p>
+			</div>
+
+		</div>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Pounds to Grams -->
+		
+		<div class="f-box1 "> 
+
+			<h3 class="box-text">Pound To Grams</h3>
+			<div class="left">
+				<p>
+				  <label class="box-text2">Pounds</label>
+				  <input id="inputPounds3" type="number" placeholder="Pounds" oninput="weightConverter3(this.value)" onchange="weightConverter3(this.value)">
+				</p>
+				<p class="border">Grams: <span id="outputGrams"></span></p>
+			</div>
+
+		</div>
+
+	</div>
+
+
+<!-- == SECTION 2 ====================================================================================== -->
+
+	<div class="f-container1" id="kilo">
+
+		<h2 class="f-full text-title ">KILO</h2>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Kilo to Pound -->
+
+
+		<div class="f-box1">
+
+			<h3 class="box-text">Kilo To Pound</h3>
+			<div class="left">
+				<p>
+				  <label class="box-text2">Kilograms</label>
+				  <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter4(this.value)" onchange="weightConverter4(this.value)">
+				</p>
+				<p class="border">Pounds: <span id="outputPounds1"></span></p>
+			</div>
+		</div>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Kilo to Ounce -->
+
+		<div class="f-box1 "> 
+
+			<h3 class="box-text">Kilo To Ounce</h3>
+			<div class="left">
+				<p>
+					<label class="box-text2">Kilograms</label>
+					<input id="inputKilograms2" type="number" placeholder="Kilograms" oninput="weightConverter5(this.value)" onchange="weightConverter5(this.value)">
+				</p>
+				<p class="border">Ounces: <span id="outputOunces1"></span></p>
+			</div>
+
+		</div>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Kilo to Grams -->
+
+		<div class="f-box1  "> 
+		
+			<h3 class="box-text">Kilo To Grams</h3>
+			<div class="left">
+				<p>
+				  <label class="box-text2">Kilograms</label>
+				  <input id="inputKilograms3" type="number" placeholder="Kilograms" oninput="weightConverter6(this.value)" onchange="weightConverter6(this.value)">
+				</p>
+				<p class="border">Grams: <span id="outputGrams1"></span></p>
+			</div>
+		</div>
+
+	</div>
+
+
+<!-- --SECTION 3------------------------------------------------------------------------------------ -->
+		
+
+	<div class="f-container1 " id="ounce">
+		
+		<h2 class="f-full text-title">OUNCE</h2>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Ounce to Pound -->
+
+		<div class="f-box1 ">
+
+			<h3 class="box-text">Ounce To Pound</h3>
+			<div class="left">
+				<p>
+				  <label class="box-text2">Ounces</label>
+				  <input id="inputOunces" type="number" placeholder="Ounces" oninput="weightConverter7(this.value)" onchange="weightConverter7(this.value)">
+				</p>
+				<p class="border">Pounds: <span id="outputPounds2"></span></p>
+			</div>
+
+		</div>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Ounce to Kilo -->
+
+		<div class="f-box1 "> 
+
+			<h3 class="box-text">Ounce To Kilo</h3>
+			<div class="left">
+				<p>
+				  <label class="box-text2">Ounces</label>
+				  <input id="inputOunces2" type="number" placeholder="Ounces" oninput="weightConverter8(this.value)" onchange="weightConverter8(this.value)">
+				</p>
+				<p class="border">Kilograms: <span id="outputKilograms2"></span></p>
+			</div>
+		</div>
+
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Ounce to Grams -->
+
+		<div class="f-box1 "> 
+		
+			<h3 class="box-text">Ounce To Grams</h3>
+			<div class="left">
+				<p>
+				  <label class="box-text2">Ounces</label>
+				  <input id="inputOunces3" type="number" placeholder="Ounces" oninput="weightConverter9(this.value)" onchange="weightConverter9(this.value)">
+				</p>
+				<p class="border">Grams: <span id="outputGrams2"></span></p>
+			</div>
+
+		</div>
+	</div>
+
+<!-- --SECTION 4------------------------------------------------------------------------------------ -->
+
+
+	<div class="f-container1 " id="grams">
+		
+		<h2 class="f-full text-title">GRAMS</h2>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Grams to Pound -->
+
+		<div class="f-box1">
+
+			<h3 class="box-text">Grams To Pound</h3>
+			<div class="left">
+				<p>
+				  <label class="box-text2">Grams</label>
+				  <input id="inputGrams" type="number" placeholder="Grams" oninput="weightConverter10(this.value)" onchange="weightConverter10(this.value)">
+				</p>
+				<p class="border">Pounds: <span id="outputPounds3"></span></p>
+			</div>
+		</div>
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Grams to Kilo -->
+
+		<div class="f-box1 "> 
+
+			<h3 class="box-text"> Grams To Kilo</h3>
+			<div class="left">
+				<p>
+				<label class="box-text2">Grams</label>
+				<input id="inputGrams2" type="number" placeholder="Grams" oninput="weightConverter11(this.value)" onchange="weightConverter11(this.value)">
+				</p>
+				<p class="border">Kilograms: <span id="outputKilograms3"></span></p>
+			</div>
+		</div>
+
+
+		<!-- ---------------------------------------------------------------- -->
+		<!-- Convert from Grams to Ounce -->
+
+		<div class="f-box1"> 
+	
+			<h3 class="box-text">Grams To Ounce</h3>
+			<div class="left">
+				<p>
+				  <label class="box-text2">Grams</label>
+				  <input id="inputGrams3" type="number" placeholder="Grams" oninput="weightConverter12(this.value)" onchange="weightConverter12(this.value)">
+				</p>
+				<p class="border">Ounces: <span id="outputOunces3"></span></p>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- == FOOTER ====================================================================================== -->
+
+
+	<footer>
+		
+	</footer>
+	
+
+
+
+<!-- == JAVASCRIPT ====================================================================================== -->
+
+
+
+<script>
+
+	var nav = document.getelementbyid('nav1'); 
+
+		window.onscroll = function() {
+
+	 if (window.pageYOffset >100) {
+
+		nav.style.background = "#007bff"; }
+
+	else {
+		nav.style.background = "red";
+	}
+}
+
+</script>
+
+
+	<!-- Pound to kilo -->
+
+	<script>
+		function weightConverter(valNum) {
+	 	document.getElementById("outputKilograms").innerHTML=(valNum/2.2046).toFixed(2);
+	}
+
+
+	</script>
+
+	<!-- Pound to Ounce -->
+
+	<script>
+	function weightConverter2(valNum) {
+	  document.getElementById("outputOunces").innerHTML=(valNum*16).toFixed(2);
+	} 
+	</script>
+
+
+	<!-- Pound to Grams -->
+
+	<script>
+	function weightConverter3(valNum) {
+	  document.getElementById("outputGrams").innerHTML=(valNum/0.0022046).toFixed(2);
+	}
+	</script>
+
+
+
+	<!-- ---------------------------------------------------------------- -->
+
+	<!-- Kilo to Pound -->
+
+	<script>
+	function weightConverter4(valNum) {
+	  document.getElementById("outputPounds1").innerHTML=(valNum*2.2046).toFixed(2);
+	}
+	</script>
+
+
+	<!-- Kilo to Ounce -->
+
+	<script>
+	function weightConverter5(valNum) {
+	  document.getElementById("outputOunces1").innerHTML=(valNum*35.274).toFixed(2);
+	}
+	</script>
+
+	<!-- Kilo to Grams -->
+
+	<script>
+	function weightConverter6(valNum) {
+	  document.getElementById("outputGrams1").innerHTML=(valNum*1000).toFixed(2);
+	}
+	</script>
+
+
+	<!-- ---------------------------------------------------------------- -->
+
+	<!-- Ounce to Pound -->
+
+	<script>
+	function weightConverter7(valNum) {
+	  document.getElementById("outputPounds2").innerHTML=(valNum*0.0625).toFixed(2);
+	}
+	</script>
+
+
+	<!-- Ounce to Kilo -->
+
+	<script>
+	function weightConverter8(valNum) {
+	  document.getElementById("outputKilograms2").innerHTML=(valNum/35.274).toFixed(2);
+	}
+	</script>
+
+
+	<!-- Ounce to Grams -->
+
+	<script>
+	function weightConverter9(valNum) {
+	  document.getElementById("outputGrams2").innerHTML=(valNum/0.035274).toFixed(2);
+	}
+	</script>
+
+	<!-- ---------------------------------------------------------------- -->
+
+	<!-- Grams to Pound -->
+
+	<script>
+	function weightConverter10(valNum) {
+	  document.getElementById("outputPounds3").innerHTML=(valNum*0.0022046).toFixed(2);
+	}
+	</script>
+
+	<!-- Grams to Kilo -->
+
+	<script>
+	function weightConverter11(valNum) {
+	  document.getElementById("outputKilograms3").innerHTML=(valNum/1000).toFixed(2);
+	}
+	</script>
+
+	<!-- Grams to Ounce -->
+
+	<script>
+	function weightConverter12(valNum) {
+	  document.getElementById("outputOunces3").innerHTML=(valNum*0.035274).toFixed(2);
+	}
+	</script>
+
+
+
+</body>
+</html>
