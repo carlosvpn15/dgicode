@@ -271,7 +271,7 @@ footer {
 .banner {
 	height: 100vh;
 	background: linear-gradient(to right, #ff9933 0%, #cc0000 100%);
-	background-image: url(dgicode/img/food2.jpg);
+	background-image: url(food2.jpg);
   	background-position: center;
   	background-size: cover;
  	background-repeat: no-repeat;	
