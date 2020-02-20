@@ -1,0 +1,839 @@
+/*=========================================================================*/
+/* <<<<<<<<< GENERAL-STYLE >>>>>>>>>> */
+/*=========================================================================*/
+
+* { 
+	box-sizing: border-box;
+	margin: 0; padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Quicksand', sans-serif;*/
+	font-size: 13px;
+}
+
+html { scroll-behavior: smooth; }  
+
+/* <<<<<<<<<< COLOR >>>>>>>>>> */
+
+/*Color 1: #  */
+/*Color 2: #  */
+/*Color 3: #  */
+/*Color 4: #  */
+/*Color 5: #  */
+/*Color 6: #  */
+
+footer {
+	height: 200px;
+	background-color: black;
+}
+
+/*=========================================================================*/
+/* <<<<<<<<< NAVBAR >>>>>>>>>> */
+/*=========================================================================*/
+
+/*<<<<<<<<<< GENERAL-MENU >>>>>>>>>> */
+
+.navbar { 
+	background-color: #26110c;
+	color: white;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,1);
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	z-index: 3;
+	padding-top: 14px;
+ }
+
+
+.navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color: #26110c;
+}
+/*BAR NAV BOTTON*/
+
+.navbar ul a {
+	display: block;
+	margin-left: 10px;
+	padding:20px;
+	border-right: 1px solid darkred;
+	text-decoration: none;
+	color: white;
+	border-radius: 10px;
+}
+
+.navbar ul a:hover {
+	border-bottom: 2px orange solid;
+	color: orange;
+
+}
+
+/*--------------*/
+
+.navbar .logo {
+	float: left;
+	display: block;
+	font-size: 20px;
+	padding: 16px 20px;
+	text-decoration: none;
+	color: white;
+	margin-left: 2px;
+}
+
+.navbar .brand {
+	float: left;
+	display: inline;
+	margin-left: 16px;
+	padding-top: 0;
+	color: white;
+}
+
+
+/* <<<<<<<<<< MOBILE-MENU >>>>>>>>>> */
+
+
+.navbar .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+}
+
+.navbar .menu-icon {
+	border-radius: 8px;
+	padding: 28px 20px;
+	position: relative;
+	float: right;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+/* Hamburger Icon */
+
+.navbar .menu-icon .nav-icon {
+	background: white;
+	display: block;
+	height: 2px;
+	width: 18px;
+	position: relative;
+	transition: background .2s ease-out;
+}
+
+.navbar .menu-icon .nav-icon:before {
+	background: white;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 6px;
+}
+
+.navbar .menu-icon .nav-icon:after {
+	background: white;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	bottom: 6px;
+}
+
+.navbar .menu-btn {
+	display: none;
+}
+
+
+.navbar .menu-btn:checked ~ .menu {
+	max-height: 410px;
+}
+
+.navbar .brand {
+	display: none;	 
+}
+
+
+/* Hamburger Icon Effect */
+
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon {
+	background: transparent;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon:before {
+	transform: rotate(-45deg);
+	transition: 0.3s;
+	top: 0;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon:after {
+	transform: rotate(45deg);
+	transition: 0.3s;
+	top: 0;
+}
+
+/*----------------------------------------------*/
+
+.btn-home {
+	color: rgba(100,100,100,0.2);
+	position: fixed;
+	right: 30px;
+	top: 80vh;
+	font-size: 16px;
+	border: solid 2px rgba(100,100,100,0.2);
+	padding: 12px 14px;
+	border-radius: 16px;
+}
+
+.btn-home:hover {
+	color: white ;
+	background-color: gray;
+	border: solid 2px gray;
+	transition: 0.2s;
+
+}
+
+
+/* <<<<<<<<<< TABLET-MENU >>>>>>>>>> */
+
+
+@media (min-width: 1150px){
+	.navbar li {
+		float: left;
+		
+	}
+
+	.navbar li a {
+		padding: 20px 30px;
+	}
+
+	.navbar .menu  {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+
+	.navbar .menu-icon {
+		display: none;
+	}
+
+	.navbar .menu {
+		margin-right: 16px;
+
+	}
+
+	.navbar .brand {
+		display: inline-block;
+		margin-left: 25px;
+		color: white;
+		width:60px;
+		float: left;
+	}
+
+	.navbar {
+		height: 85px;
+	}
+
+	.btn-home {
+		display: none;
+	}
+}
+
+/* <<<<<<<<<< DESKTOP-MENU >>>>>>>>>> */
+
+@media (min-width: 1200px){
+
+	.active {
+		background: rgb(11,68,1);
+		background: linear-gradient(5deg, rgba(11,68,1,1) 0%, rgba(65,181,10,1) 100%);
+		color:black;
+		border-bottom: 2px orange solid;
+		color: orange;
+	}
+
+	.navbar ul a { 
+		padding: 10px 30px;
+		margin-top: 10px;
+	}
+
+
+}
+
+
+/*=========================================================================*/
+/* <<<<<<<<< HEADER >>>>>>>>>> */
+/*=========================================================================*/
+
+/* <<<<<<<<<< MOBILE-STYLE >>>>>>>>>> */
+
+.banner {
+	height: 100vh;
+	background: linear-gradient(to right, #ff9933 0%, #cc0000 100%);
+	background-image: url(../img/food2.jpg);
+  	background-position: center;
+  	background-size: cover;
+ 	background-repeat: no-repeat;	
+}
+
+
+.main-text {
+	font-size: 35px;
+	color: white;
+	padding-top: 5vh;
+	text-align: center;	
+	text-shadow: black 2px 2px 3px;
+}
+
+
+.main-text2 {
+	font-size: 35px;
+	color: white;
+	padding-top: 5vh;
+	text-align: center;	
+	text-shadow: black 2px 2px 3px;
+}
+
+
+
+
+
+/* <<<<<<<<<< TABLET-STYLE >>>>>>>>>> */
+
+@media (min-width: 812px){
+	
+	.banner {
+		height: 95vh;
+	}
+
+	.main-text {
+		font-size: 60px;
+		padding-top: 40vh;
+	}
+
+	.main-text2 {
+		font-size: 60px;
+		padding-top: 5vh;
+	}
+
+}
+
+
+
+/* <<<<<<<<<< DESKTOP-STYLE >>>>>>>>>> */
+
+
+@media (min-width: 1024px){
+	
+	.banner {
+		height: 100vh;
+	}
+
+	.main-text {
+		font-size: 90px;
+		padding-top: 45vh;
+	}
+
+	.main-text2 {
+		font-size: 90px;
+		padding-top: 5vh;
+	}
+
+
+}
+
+
+
+
+/*=========================================================================*/
+/* <<<<<<<<< MAIN PAGE >>>>>>>>>> */
+/*=========================================================================*/
+
+.main-logo {
+	width: 100%;	
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	height: 60%;
+		
+}
+
+.main-logo2 {
+	box-shadow: 1px 1px 6px 2px darkred;
+	border-radius: 8px;
+	width: 120px;
+	height: auto;
+
+}
+
+
+.news {
+	height: 600px;
+	background-color: white;
+	align-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 16px;
+	font-size: 16px;
+
+}
+
+.p-space {
+	flex-basis: 100%;
+}
+
+
+
+/* <<<<<<<<<< TABLET-STYLE >>>>>>>>>> */
+
+@media (min-width: 812px){
+	
+	.main-logo {
+		width: 100%;	
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 50vh;
+	}
+
+
+	.main-logo2 {
+	box-shadow: 1px 1px 6px 2px darkred;
+	border-radius: 10px;
+	width: 200px;
+	height: auto;
+
+
+	
+	}
+
+	.news {
+	height: 500px;
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 16px;
+	font-size: 16px;
+	}
+
+	.p-space {
+		flex-basis: 100%;
+	}
+
+
+}
+
+
+/* <<<<<<<<<< DESKTOP-STYLE >>>>>>>>>> */
+
+
+@media (min-width: 1024px){
+	
+	.main-logo {
+	text-align: center;	
+	padding-top: 30vh;
+
+	}
+
+
+	.main-logo2 {
+
+	}
+	
+	.news {
+	height: 600px;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	padding: 16px;
+	font-size: 16px;
+}
+
+	.p-space {
+		flex-basis: 25%;
+	}
+
+
+
+	
+
+
+}
+
+
+/*=========================================================================*/
+/* <<<<<<<<< VENDOR LIST >>>>>>>>>> */
+/*=========================================================================*/
+
+.vendor-list {
+
+	height: 600px;
+	background-color: white;
+	align-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 16px;
+	font-size: 16px;
+}
+
+
+/* <<<<<<<<<< TABLET-STYLE >>>>>>>>>> */
+
+@media (min-width: 812px){ 
+
+	.vendor-list {
+
+	height: 600px;
+	background-color: white;
+	align-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 16px;
+	font-size: 16px;
+	}
+
+
+
+}
+
+
+
+/* <<<<<<<<<< DESKTOP-STYLE >>>>>>>>>> */
+
+
+@media (min-width: 1024px){
+
+	.vendor-list {
+
+	height: 600px;
+	background-color: white;
+	align-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 16px;
+	font-size: 16px;
+	}
+
+}
+
+
+
+/*=========================================================================*/
+/* <<<<<<<<< ORDER >>>>>>>>>> */
+/*=========================================================================*/
+
+
+
+/* ---------FORM--------- 1*/
+
+/* Style inputs */
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add a background color to the submit button on mouse-over */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+/*--------------------------*/
+
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+.order-form {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 16px;
+	justify-content: center;
+	border: 1px solid red;
+	width: 50%;
+	border-radius: 10px;
+	background-color: darkgray;
+	margin:10px auto;
+}
+
+.order-container {
+	height: 800px;
+}
+
+
+
+
+/* <<<<<<<<<< TABLET-STYLE >>>>>>>>>> */
+
+@media (min-width: 820px){ 
+
+
+}
+
+
+
+
+
+
+
+/* <<<<<<<<<< DESKTOP-STYLE >>>>>>>>>> */
+
+@media (min-width: 1024px){ 
+
+
+
+}
+
+
+
+
+/*=========================================================================*/
+/* <<<<<<<<< WEIGHT >>>>>>>>>> */
+/*=========================================================================*/
+
+input[type=number] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.border {
+	padding: 5px;
+	border: 1px solid #cfcfcf;
+	border-radius: 5px;
+	background-color: #edeff0;
+
+}
+
+.section-weght {
+	height: 50%;
+	background-color: ;
+	background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.3)), url(../img/bg.jpg) ;
+  	background-position: center;
+  	background-size: 350px 350px ;
+ 	background-repeat: repeat;
+ }
+
+.f-container1 {
+	text-align: center;
+	padding: 10px 16px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+/*	flex-flow: ;*/
+	justify-content:center;
+	align-items: center;
+	align-content: center;
+}
+
+.f-box1 {
+	padding: 5% 2%;
+	margin: 10px;
+	border-radius: 10px;
+	border: solid #c73500 2px;
+	width: 100%;
+	height:auto; 
+	background: rgb(203,200,200);
+	background: linear-gradient(0deg, rgba(203,200,200,1) 0%, rgba(255,255,255,1) 100%);
+	box-shadow: #404040 3px 3px 5px;
+	color: black;
+	font-size: 14px;
+
+}
+
+.box-text {
+padding: 10px; 
+}
+
+.box-text2 {
+	padding-left: 5px;
+}
+
+
+.box-text3 {
+	height: 30px;
+}
+
+
+.f-lg-3 {  } 
+.f-md-2 {}
+.f-sm-1 {}
+.f-full {
+	width: 100%;
+	padding: 40px;
+}
+
+.btn-container {
+	margin: 5% auto 2%;
+	padding: 1% auto;
+	display: flex;
+	justify-content: space-around;
+	width:60%;
+	font-size: 16px;
+	flex-wrap: wrap;
+		
+}
+
+.btn-link {
+    border: 1px black solid;
+	border-radius: 8px;
+	text-decoration: none;
+	background: rgb(51,136,0);
+	background: linear-gradient(0deg, rgba(51,136,0,1) 38%, rgba(224,199,0,1) 100%);
+	border-bottom: red solid 1px;
+	color: white;
+	margin-bottom: 5px;
+	padding: 10px 16px;
+	text-align: center;
+	box-shadow: black 2px 2px 3px; 
+	flex-grow: 1;
+}
+
+.btn-link2 {
+    border: 1px black solid;
+	border-radius: 8px;
+	text-decoration: none;
+	background: rgb(51,136,0);
+	background: linear-gradient(0deg, rgba(51,136,0,1) 38%, rgba(224,199,0,1) 100%);
+	border-bottom: red solid 1px;
+	color: white;
+	margin-bottom: 5px;
+	padding: 10px 30px;
+	text-align: center;
+	box-shadow: black 2px 2px 3px; 
+}
+
+
+
+
+
+.btn-link:hover {
+	color: white;
+	background-color: background: rgb(51,136,0);
+	background: linear-gradient(180deg, rgba(51,136,0,1) 38%, rgba(224,48,0,1) 100%);;
+
+} 
+
+.left {
+	text-align: left;
+	padding-top: 10px;
+}
+
+.text-title {  
+	font-size: 25px;
+	color: #fcfeff;
+	text-align: center;	
+	text-shadow: black 1px 1px 5px;
+}
+
+
+
+/* <<<<<<<<<< TABLET-STYLE >>>>>>>>>> */
+
+@media (min-width: 820px){
+
+	.btn-container {
+	margin: 3% auto 1%;
+	padding: 1% auto;
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+	font-size: 16px;
+	flex-wrap: wrap;
+		
+}
+
+	.f-box1 {
+		width: 45%;
+		height:auto; 
+		padding: 10% 2%;
+		font-size: 16px;
+
+	}
+
+	.btn-link {
+		width: 20%;
+		flex-basis: 20%;
+	}
+	
+
+}
+
+
+
+/* <<<<<<<<<< DESKTOP-STYLE >>>>>>>>>> */
+
+@media (min-width: 1024px){
+
+	.f-box1 {
+		width: 25%;
+		padding: 5% 2%;
+
+	}
+
+
+
+}
